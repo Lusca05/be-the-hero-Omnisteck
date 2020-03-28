@@ -8,28 +8,45 @@ import './styles.css';
 import logoImg from '../../assets/logo.svg'; 
 
 export default function NewIncident(){
+    /**
+     * Deixando os valores dos inputs no cadastro de incidents vazios
+     */
     const[title,setTitle] = useState('');
     const[description,setDescription] = useState('');
     const[value,setValue] = useState('');
 
     const history = useHistory();
 
+    /**
+     * Pegando o id da ong logada do local storage do navegador
+     */
     const ongId = localStorage.getItem('ongId');
 
-    async function handleNeweIncident(e){
+    /**
+     * Função para pegar os valores dos inputs para cadastrar no banco o incidente descrito
+     */
+    async function handleNewIncident(e){
         e.preventDefault();
+        /**
+         * Armazenando em data os os input preenchidos
+         */
         const data = { 
             title,
             description,
             value,
         };
         try{
+            /**
+             * Fazendo o post na api com a data o header, para setar que foi aquela ong que criou
+             */
             await api.post('incidents', data, {
                 headers: {
                     Authorization: ongId,
                 }
             })
-
+            /**
+             * voltando para o profile, lugar onde mostra os incidents craido pela ong logada
+             */
             history.push('/profile');
         }catch(err){
             alert("Erro ao cadastrar caso tente novamente")
@@ -51,7 +68,8 @@ export default function NewIncident(){
                     </Link>
 
                 </section>
-                <form onSubmit={handleNeweIncident}>
+                
+                <form onSubmit={handleNewIncident}>
                     <input type="text" 
                         placeholder="Titulo do caso"
                         value={title}
