@@ -1,0 +1,28 @@
+.logon-container{
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    margin: 0 auto;
+    /*
+    Ao ser diplay flex acontece que eles vao ficar um do lado do outro caso queira mudar mude o align para colunas ou outros
+    */
+    display: flex;
+    /*ALinha os itens verticalmente*/
+    align-items: center;
+    /*Alinha os iten horizontalmente*/
+    justify-content: space-between;
+}
+.logon-container section.form{
+    width: 100%;
+    max-width: 350PX;
+    margin-right: 30PX;
+    
+}
+.logon-container section.form form{
+    margin-top: 100px;
+}
+.logon-container section.form form h1{
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+

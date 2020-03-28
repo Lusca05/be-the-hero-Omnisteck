@@ -43,5 +43,7 @@ Funcionalidade:
         Listar Todos os casos
         Entrar em contato com a ONG
 
+------------------------------------------------------------
+Olhar Fira Code - Font Ligatures
 
    
