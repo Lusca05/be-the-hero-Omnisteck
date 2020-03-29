@@ -46,4 +46,19 @@ Funcionalidade:
 ------------------------------------------------------------
 Olhar Fira Code - Font Ligatures
 
+------------------------------------------------------------
+
+Tentar hospedar a aplicação no heroku
+pesquisar no canal da rocketseat aplicaçao node(backend).
+Netlify para frontend
+transformar app expo para apk ou ipa video "Gerando APK (Android) e IPA (IOS) com react native & expo"
+
+versao free, para apenas testes
+
+DIgital ocean para hospedar caso a aplicaçao seja comercial
+video rocketseat "deploy de apps NOde.js
+
+
+
+
    
